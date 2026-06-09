@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Brand Identity System",
+      "category": "Branding",
+      "description": "Complete visual identity redesign for a fintech startup, including logo, color palette, typography, and brand guidelines.",
+      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+      "tags": ["Branding", "Logo Design", "Typography"],
+      "year": "2024",
+      "client": "FinFlow Inc."
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce Web Platform",
+      "category": "Web Design",
+      "description": "Full-stack e-commerce experience with custom UI, product filtering, and a streamlined checkout flow for a fashion retailer.",
+      "image": "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=600&q=80",
+      "tags": ["Web Design", "UX/UI", "E-Commerce"],
+      "year": "2024",
+      "client": "Threadline Co."
+    },
+    {
+      "id": 3,
+      "title": "Mobile Banking App",
+      "category": "UX/UI",
+      "description": "User-centered mobile app design focusing on accessibility and simplified navigation for everyday banking tasks.",
+      "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80",
+      "tags": ["Mobile", "UX/UI", "Fintech"],
+      "year": "2023",
+      "client": "Vault Bank"
+    },
+    {
+      "id": 4,
+      "title": "Annual Report Design",
+      "category": "Print",
+      "description": "Award-winning annual report layout combining data visualization, editorial photography, and cohesive typography.",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+      "tags": ["Print", "Layout", "Data Viz"],
+      "year": "2023",
+      "client": "NovaCorp"
+    },
+    {
+      "id": 5,
+      "title": "Social Media Campaign",
+      "category": "Digital Marketing",
+      "description": "Multi-platform social campaign that drove a 200% engagement increase through motion graphics and consistent visual storytelling.",
+      "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80",
+      "tags": ["Social Media", "Motion", "Marketing"],
+      "year": "2023",
+      "client": "PulseWear"
+    },
+    {
+      "id": 6,
+      "title": "Restaurant Menu & Collateral",
+      "category": "Print",
+      "description": "Complete print collateral suite for an upscale restaurant, including menus, signage, and packaging design.",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+      "tags": ["Print", "Packaging", "Branding"],
+      "year": "2022",
+      "client": "Saffron Kitchen"
+    }
+  ]
+}
