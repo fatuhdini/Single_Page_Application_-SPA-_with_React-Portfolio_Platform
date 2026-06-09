@@ -1,0 +1,224 @@
+.add-page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.add-page__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Header */
+.add-page__header {
+  text-align: center;
+}
+
+.add-page__label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 50px;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.add-page__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.add-page__sub {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+}
+
+/* Success state */
+.add-page__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3rem;
+  background: rgba(167, 139, 250, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.add-page__success-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(167, 139, 250, 0.15);
+  color: #a78bfa;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-page__success p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Form */
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.add-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.add-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.add-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.add-form__optional {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.add-form__input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.add-form__input:focus {
+  border-color: #a78bfa;
+  background: rgba(167, 139, 250, 0.07);
+}
+
+.add-form__input--error {
+  border-color: #f87171;
+}
+
+.add-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.add-form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.4)' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  cursor: pointer;
+}
+
+.add-form__select option {
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.add-form__textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-form__error {
+  font-size: 0.78rem;
+  color: #f87171;
+  font-weight: 500;
+}
+
+/* Actions */
+.add-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.add-form__btn {
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+}
+
+.add-form__btn--ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.add-form__btn--ghost:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.add-form__btn--primary {
+  background: #a78bfa;
+  color: #0a0a0a;
+}
+
+.add-form__btn--primary:hover {
+  background: #c4b5fd;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .add-page {
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .add-form {
+    padding: 1.25rem;
+  }
+
+  .add-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .add-form__actions {
+    flex-direction: column-reverse;
+  }
+
+  .add-form__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
