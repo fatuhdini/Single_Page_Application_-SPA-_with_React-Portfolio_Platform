@@ -133,3 +133,74 @@
     padding: 1.5rem 1rem 4rem;
   }
 }
+
+.detail-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.detail-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-edit-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.detail-edit-input:focus {
+  border-color: #a78bfa;
+}
+
+.detail-edit-textarea {
+  resize: vertical;
+}
+
+.detail-edit-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.detail-edit-btn {
+  padding: 0.55rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.detail-edit-btn--save {
+  background: #a78bfa;
+  border: 1px solid #a78bfa;
+  color: #0f0f13;
+}
+
+.detail-edit-btn--save:hover {
+  background: #c4b5fd;
+  border-color: #c4b5fd;
+}
+
+.detail-edit-btn--cancel {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.detail-edit-btn--cancel:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
