@@ -1,36 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import AddProjectPage from "./pages/AddProjectPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
-import initialProjects from "./data/projects";
+import useProjects from "./hooks/useProjects";
 import "./App.css";
 
 /**
  * App — root component.
- * Holds the shared `projects` state and passes it down via props.
+ * Delegates all project state and CRUD to the useProjects custom hook.
  *
  * Component tree:
  * App
  * ├── Navbar
  * └── Routes
- *     ├── HomePage       → SearchBar, ProjectList → ProjectCard
- *     ├── AddProjectPage → AddForm
+ *     ├── HomePage         → SearchBar, ProjectList → ProjectCard
+ *     ├── AddProjectPage   → AddForm
  *     └── ProjectDetailPage
  */
 function App() {
-  const [projects, setProjects] = useState(initialProjects);
+  const { projects, loading, error, addProject, updateProject, deleteProject } =
+    useProjects();
 
-  // Add a new project to the top of the list
-  const handleAddProject = (project) => {
-    setProjects((prev) => [project, ...prev]);
-  };
-
-  // Remove a project by id
-  const handleDeleteProject = (id) => {
-    setProjects((prev) => prev.filter((p) => p.id !== id));
-  };
+  if (loading) return <div className="app-status">Loading projects…</div>;
+  if (error) return <div className="app-status app-status--error">Error: {error}</div>;
 
   return (
     <BrowserRouter>
@@ -40,14 +34,15 @@ function App() {
           <Route path="/" element={<HomePage projects={projects} />} />
           <Route
             path="/add"
-            element={<AddProjectPage onAdd={handleAddProject} />}
+            element={<AddProjectPage onAdd={addProject} />}
           />
           <Route
             path="/project/:id"
             element={
               <ProjectDetailPage
                 projects={projects}
-                onDelete={handleDeleteProject}
+                onDelete={deleteProject}
+                onUpdate={updateProject}
               />
             }
           />
